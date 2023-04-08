@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
+        <EnableAnalyzerReleaseTracking>true</EnableAnalyzerReleaseTracking>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Remove="Microsoft.CodeAnalysis.Analyzers" />
+        <None Remove="Microsoft.CodeAnalysis.Common" />
+        <None Remove="Microsoft.CodeAnalysis.CSharp.Workspaces" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.4">
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+            <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.CodeAnalysis.Common" Version="3.8.0" />
+        <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="3.8.0" />
+    </ItemGroup>
+</Project>
